@@ -1,11 +1,24 @@
-//
-//  main.swift
-//  hw4month2
-//
-//  Created by Александр Калашников on 18/6/22.
-//
+var warrior1 = Warriors()
+var warrior2 = Warriors()
+var warrior3 = Warriors()
+var warriors = Warriors()
+var boss = Boss()
 
-import Foundation
+warrior1.setDamage(damage: 50)
+warrior1.setHealth(health: 100)
+warrior2.setDamage(damage: 75)
+warrior2.setHealth(health: 150)
+warrior3.setDamage(damage: 35)
+warrior3.setHealth(health: 70)
+warriors.ultimateType(ultimateType: "Гоблинскя атака")
+warriors.setUltimateDamage(ultimateDamage: 240)
 
-print("Hello, World!")
+boss.setDamage(damage: 10)
+boss.setHealth(health: 500)
+boss.ultimateType(ultimateType: "Убийство душами")
+boss.setUltimateDamage(ultimateDamage: 20)
+warrior1.setUltimateDamage(ultimateDamage: 120)
 
+print(dump(boss.health))
+warrior1.makeDamage(enemyHealth: boss)
+print(dump(boss.health))
